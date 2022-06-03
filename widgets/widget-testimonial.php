@@ -1,12 +1,12 @@
 <?php
 
-namespace DT\Widgets;
+namespace WidgetsTestimonialDT\Widgets;
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class Testimonial extends Widget_Base {
+class WidgetsTestimonialDTTestimonial extends Widget_Base {
 	public function get_name() {
 		return 'Testimonial';
 	}
@@ -29,10 +29,10 @@ class Testimonial extends Widget_Base {
 		$this->add_control(
 	      'testimonial_title',
 	      [
-	        'label' => __( 'Title', 'elementor' ),
+	        'label' => __( 'Title', 'widgetstestimonialdt' ),
 	        'type' => Controls_Manager::TEXT,
-	        'placeholder' => __( 'Coloque el titulo', 'elementor' ),
-	        'default' => __('What Clients Say', 'elementor'),
+	        'placeholder' => __( 'Coloque el titulo', 'widgetstestimonialdt' ),
+	        'default' => __('What Clients Say', 'widgetstestimonialdt'),
 	        'label_block' => true,
 	      ]
 	    );
@@ -50,22 +50,22 @@ class Testimonial extends Widget_Base {
 	    $repeater_testimonial->add_control(
 			'testimonial_image',
 			[
-				'label' => esc_html__( 'Choose Image', 'plugin-name' ),
+				'label' => esc_html__( 'Choose Image', 'widgetstestimonialdt' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				],
-				'description' => __('resolución sugerida 291x249', 'elementor' ),
+				'description' => __('resolución sugerida 291x249', 'widgetstestimonialdt' ),
 			]
 		);
 
 	    $repeater_testimonial->add_control(
 	      'testimonial_name',
 	      [
-	        'label' => __( 'Title', 'elementor' ),
+	        'label' => __( 'Title', 'widgetstestimonialdt' ),
 	        'type' => Controls_Manager::TEXT,
-	        'placeholder' => __( 'Title', 'elementor' ),
-	        'default' => __( 'Jhon Due', 'elementor' ),
+	        'placeholder' => __( 'Title', 'widgetstestimonialdt' ),
+	        'default' => __( 'Jhon Due', 'widgetstestimonialdt' ),
 	        'label_block' => true,
 	      ]
 	    );
@@ -73,10 +73,10 @@ class Testimonial extends Widget_Base {
 	    $repeater_testimonial->add_control(
 	      'testimonial_description',
 	      [
-	        'label' => __( 'Testimonial', 'elementor' ),
+	        'label' => __( 'Testimonial', 'widgetstestimonialdt' ),
 	        'type' => Controls_Manager::TEXTAREA,
-	        'placeholder' => __( 'Testimonial', 'elementor' ),
-	        'default' => __( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.', 'elementor' ),
+	        'placeholder' => __( 'Testimonial', 'widgetstestimonialdt' ),
+	        'default' => __( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.', 'widgetstestimonialdt' ),
 	        'label_block' => true,
 	      ]
 	    );
@@ -84,15 +84,15 @@ class Testimonial extends Widget_Base {
 	    $repeater_testimonial->add_control(
 	      'testimonial_rating',
 	      [
-	        'label' => esc_html__( 'Estrellas', 'elementor' ),
+	        'label' => esc_html__( 'Estrellas', 'widgetstestimonialdt' ),
 	        'type' => Controls_Manager::SELECT,
 	        'default' => '5',
 	        'options' => [
-	          '5' => esc_html__( '5', 'elementor' ),
-	          '4' => esc_html__( '4', 'elementor' ),
-	          '3' => esc_html__( '3', 'elementor' ),
-	          '2' => esc_html__( '2', 'elementor' ),
-	          '1' => esc_html__( '1', 'elementor' ),
+	          '5' => esc_html__( '5', 'widgetstestimonialdt' ),
+	          '4' => esc_html__( '4', 'widgetstestimonialdt' ),
+	          '3' => esc_html__( '3', 'widgetstestimonialdt' ),
+	          '2' => esc_html__( '2', 'widgetstestimonialdt' ),
+	          '1' => esc_html__( '1', 'widgetstestimonialdt' ),
 	        ],
 	        'frontend_available' => true,
 	      ]
@@ -101,13 +101,13 @@ class Testimonial extends Widget_Base {
 	    $this->add_control(
 	      'testimonial_list',
 	      [
-	        'label' => __( 'Lista testimonios', 'elementor' ),
+	        'label' => __( 'Lista testimonios', 'widgetstestimonialdt' ),
 	        'type' => \Elementor\Controls_Manager::REPEATER,
 	        'fields' => $repeater_testimonial->get_controls(),
 	        'default' => [
 	          [
-	            'testimonial_name' => __( 'Juan', 'elementor' ),
-	            'testimonial_description' => __( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.', 'elementor' ),
+	            'testimonial_name' => __( 'Juan', 'widgetstestimonialdt' ),
+	            'testimonial_description' => __( 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. It is a long established fact that a reader will be distracted by the readable its layout.', 'widgetstestimonialdt' ),
 	          ],
 	        ],
 	        'title_field' => '{{{ testimonial_name }}}',
@@ -128,7 +128,7 @@ class Testimonial extends Widget_Base {
 					<div class="row">
 						<div class="col-sm-offset-2 col-sm-8">
 							<div>
-								<h2 class="section-title"><?php echo $settings['testimonial_title']; ?></h2>
+								<h2 class="section-title"><?php echo esc_attr($settings['testimonial_title']); ?></h2>
 							</div>
 						</div><!-- /End col -->
 					</div><!-- /End row -->
@@ -140,11 +140,11 @@ class Testimonial extends Widget_Base {
               					<?php foreach ($settings['testimonial_list'] as $item) { ?>
 									<!-- slider item -->
 									<div class="feedback-slider-item">
-										<img src="<?php echo $item['testimonial_image']['url'] ?>" alt="Customer Feedback">
-										<h3 class="customer-name"><?php echo $item['testimonial_name'] ?></h3>
+										<img src="<?php echo esc_attr($item['testimonial_image']['url']); ?>" alt="Customer Feedback">
+										<h3 class="customer-name"><?php echo esc_attr($item['testimonial_name']); ?></h3>
 										<p><?php echo $item['testimonial_description'] ?></p>
-										<span class="light-bg customer-rating" data-rating="<?php echo $item['testimonial_rating'] ?>">
-											<?php echo $item['testimonial_rating'] ?>
+										<span class="light-bg customer-rating" data-rating="<?php echo esc_attr($item['testimonial_rating']); ?>">
+											<?php echo esc_attr($item['testimonial_rating']); ?>
 											<i class="fa fa-star"></i>
 										</span>
 									</div>
@@ -157,10 +157,10 @@ class Testimonial extends Widget_Base {
 								<?php if (isset($settings['testimonial_list'][0])) { ?>
 								<div class="thumb-prev">
 									<span>
-										<img src="<?php echo $settings['testimonial_list'][0]['testimonial_image']['url'] ?>" alt="Customer Feedback">
+										<img src="<?php echo esc_attr($settings['testimonial_list'][0]['testimonial_image']['url']); ?>" alt="Customer Feedback">
 									</span>
 									<span class="light-bg customer-rating">
-										<?php echo  $settings['testimonial_list'][0]['testimonial_rating'] ?>
+										<?php echo  esc_attr($settings['testimonial_list'][0]['testimonial_rating']); ?>
 										<i class="fa fa-star"></i>
 									</span>
 								</div>
@@ -168,10 +168,10 @@ class Testimonial extends Widget_Base {
 								<?php if (isset($settings['testimonial_list'][1])) { ?>
 								<div class="thumb-next">
 									<span>
-										<img src="<?php echo $settings['testimonial_list'][1]['testimonial_image']['url'] ?>" alt="Customer Feedback">
+										<img src="<?php echo esc_attr($settings['testimonial_list'][1]['testimonial_image']['url']); ?>" alt="Customer Feedback">
 									</span>
 									<span class="light-bg customer-rating">
-										<?php echo  $settings['testimonial_list'][1]['testimonial_rating'] ?>
+										<?php echo  esc_attr($settings['testimonial_list'][1]['testimonial_rating']); ?>
 										<i class="fa fa-star"></i>
 									</span>
 								</div>
