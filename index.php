@@ -4,7 +4,7 @@
  * Plugin Name: Widgets Testimonial DT
  * Plugin URI: 
  * Description: Plugin que permite crear Widgets de testimonios.
- * Version: 1.0.1
+ * Version: 1.0.0
  * Author: Delvis Tovar
  * Text Domain: widgetstestimonialdt
  * Author URI: https://github.com/DelvisTovar
