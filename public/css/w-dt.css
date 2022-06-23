@@ -54,6 +54,8 @@ body {
 .customer-feedback .owl-item img {
 	width: 85px;
 	height: 85px;
+	border-radius: 50%;
+	margin: 0 auto;
 }
 
 .feedback-slider-item {
@@ -130,7 +132,7 @@ body {
 	top: 45%;
 	width: 98px;
 	height: 98px;
-	left: -90px;
+	left: 120px;
 	cursor: pointer;
 	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
@@ -138,7 +140,7 @@ body {
 
 .thumb-next {
 	left: auto;
-	right: -90px;
+	right: 120px;
 }
 
 .feedback-slider-thumb img {
@@ -209,6 +211,12 @@ body {
 .customer-feedback .owl-dots .owl-dot.active span {
 	background-color: rgb(251, 90, 13);
 }
+.owl-carousel .owl-stage-outer{
+	width: 100% !important;
+}
+.cont-test{
+	margin: 0 auto;
+}
 
 /* RESPONSIVE */
 @media screen and (max-width: 767px) {
@@ -229,4 +237,8 @@ body {
 	.customer-feedback .owl-next {
 		right: 0;
 	}
+	.thumb-prev, .thumb-next{
+		display: none;
+	}
 }
+

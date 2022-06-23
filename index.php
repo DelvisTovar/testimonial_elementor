@@ -24,7 +24,7 @@ defined( 'W_DT_BASEURI' ) || define( 'W_DT_BASEURI', plugin_dir_url( __FILE__ ) 
 
 /** Enqueue plugin scripts */
 add_action( 'wp_enqueue_scripts', function() {
-	wp_enqueue_script( 'bootstrap.min.js',W_DT_BASEURI .'public/js/bootstrap.min.js', array('jquery'), '4.0.0', true );
+	wp_enqueue_script( 'bootstrap.min.js',W_DT_BASEURI .'public/js/bootstrap.bundle.min.js', array('jquery'), '5.1.3', true );
 	wp_enqueue_script( 'owl.carousel.min.js', W_DT_BASEURI .'public/js/owl.carousel.min.js', array('jquery'), generarCodigo(3), true );
 	wp_enqueue_script( 'w-dt.js', W_DT_BASEURI . 'public/js/w-dt.js', array('jquery'), generarCodigo(3), true );
 
@@ -33,7 +33,7 @@ add_action( 'wp_enqueue_scripts', function() {
 /** Enqueue plugin styles */
 add_action( 'wp_enqueue_scripts', function() {
 	wp_enqueue_style( 'fonts.googleapis.com', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700');
-	wp_enqueue_style( 'bootstrap.min.css',  W_DT_BASEURI . 'public/css/bootstrap.min.css', array(), '3.3.7');
+	wp_enqueue_style( 'bootstrap.min.css',  W_DT_BASEURI . 'public/css/bootstrap5.1.3.min.css', array(), '5.1.3');
 	wp_enqueue_style( 'awesome.css',  W_DT_BASEURI . 'public/css/font-awesome.min.css', array(), '4.7.0');
 	wp_enqueue_style( 'owl.carousel.min.css', W_DT_BASEURI . 'public/css/owl.carousel.min.css', array(), generarCodigo(3));
 	wp_enqueue_style( 'animate.min.css', W_DT_BASEURI . 'public/css/animate.min.css', array(), generarCodigo(3));

@@ -126,7 +126,7 @@ class WidgetsTestimonialDTTestimonial extends Widget_Base {
 			<div class="customer-feedback">
 				<div class="container text-center">
 					<div class="row">
-						<div class="col-sm-offset-2 col-sm-8">
+						<div class="col-sm-offset-2 col-12">
 							<div>
 								<h2 class="section-title"><?php echo esc_attr($settings['testimonial_title']); ?></h2>
 							</div>
@@ -134,7 +134,7 @@ class WidgetsTestimonialDTTestimonial extends Widget_Base {
 					</div><!-- /End row -->
 
 					<div class="row">
-						<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8">
+						<div class="col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 cont-test">
 							<?php if ($settings['testimonial_list']) { ?>
 								<div class="owl-carousel feedback-slider">
               					<?php foreach ($settings['testimonial_list'] as $item) { ?>
