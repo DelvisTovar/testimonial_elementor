@@ -32,7 +32,7 @@ class WidgetsTestimonialDTMAin
 			$plugin = "Elementor Page Builder";
 			?>
 			<div class="notice notice-warning is-dismissible">
-				<p>Please install <a href="<?php echo $link; ?>"><?php echo $plugin; ?></a> to use REDO JSComposer
+				<p>Please install <a href="<?php echo esc_attr($link); ?>"><?php echo esc_attr($plugin); ?></a> to use REDO JSComposer
 				Additional.</p>
 			</div>
 			<?php

@@ -142,7 +142,7 @@ class WidgetsTestimonialDTTestimonial extends Widget_Base {
 									<div class="feedback-slider-item">
 										<img src="<?php echo esc_attr($item['testimonial_image']['url']); ?>" alt="Customer Feedback">
 										<h3 class="customer-name"><?php echo esc_attr($item['testimonial_name']); ?></h3>
-										<p><?php echo $item['testimonial_description'] ?></p>
+										<p><?php echo esc_attr($item['testimonial_description']); ?></p>
 										<span class="light-bg customer-rating" data-rating="<?php echo esc_attr($item['testimonial_rating']); ?>">
 											<?php echo esc_attr($item['testimonial_rating']); ?>
 											<i class="fa fa-star"></i>
